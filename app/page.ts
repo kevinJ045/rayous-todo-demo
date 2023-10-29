@@ -13,6 +13,12 @@ export default class extends Component {
 		return new Widget({
 			class: 'main',
 			children: [
+				new Text('Todo List', {
+					style: {
+						fontSize: 28,
+						margin: 10
+					}
+				}),
 				new Widget({
 					class: 'addbar',
 					children: [
