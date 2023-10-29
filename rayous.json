@@ -1,0 +1,16 @@
+{
+  "title": "Todo App With Rayous",
+  "meta": {
+    "author": "makano"
+  },
+  "links": [
+    {
+      "type": "stylesheet",
+      "link": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap"
+    },
+    {
+      "type": "icon",
+      "link": "https://github.com/kevinj045.png"
+    }
+  ]
+}
