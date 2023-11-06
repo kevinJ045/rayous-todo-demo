@@ -35,9 +35,15 @@ import Page0 from "../app/page";
 			const initResponse = typeof clientInit.init == "function" ? clientInit.init(buildProps()) || {} : {};
 	
 			let page0 = new Page0();
-let made0 = page0.build(buildProps({init: initResponse, page: null}));
+page0._beforeInit();
+page0.initState(buildProps());
+let made0 = page0.make(buildProps({init: initResponse, page: null}));
 	
-			made0.to(document.body)
+			if(Page0.layouts === false){
+				made0.to(document.body);
+			} else {
+				made0.to(document.body)
+			}
 	
 			if(typeof page0.afterBuild == "function") page0.afterBuild(buildProps({page: made0}));
 			if(typeof clientInit.after == "function") clientInit.after(buildProps({page: made0}));
